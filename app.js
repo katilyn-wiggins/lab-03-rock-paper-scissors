@@ -1,7 +1,8 @@
 // import functions and grab DOM elements
-import { generateComputerChoice } from './utils.js';
+import { generateComputerChoice, doesUserWin } from './utils.js';
 
 const playButton = document.getElementById('play-button');
+const messageDisplay = document.getElementById('message');
 const winsDisplay = document.getElementById('wins');
 const lossesDisplay = document.getElementById('losses');
 const drawDisplay = document.getElementById('draws');
@@ -28,12 +29,41 @@ playButton.addEventListener('click', () => {
     const radioButtonSelection = document.querySelector('input[type="radio"]:checked');
     const userSelection = radioButtonSelection.value;
 
+    //win 
+    if (doesUserWin(userSelection, computerSelection) === 'player wins') {
+        wins++;
+        total++;
+        messageDisplay.textContent = 'You win! Best 2 out of 3?';
+
+    }
+
+    //lose
+    if (doesUserWin(userSelection, computerSelection) === 'player loses') {
+        losses++;
+        total++;
+        messageDisplay.textContent = 'You lose! Try Again!';
+
+    }
+
+    // draw
+    if (doesUserWin(userSelection, computerSelection) === 'draw') {
+        draws++;
+        total++;
+        messageDisplay.textContent = 'You two cowboys picked the same item, you\'ve got a draw!';
+
+    }
 
 });
 
+function updateDisplays() {
+    winsDisplay.textContent = wins;
+    lossesDisplay.textContent = losses;
+    drawDisplay.textContent = draws;
+    totalDisplay.textContent = total;
+}
 
 
 
-restartButton.addEventListener('click', () => {
+// restartButton.addEventListener('click', () => {
 
-});
+// });
