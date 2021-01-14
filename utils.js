@@ -1,12 +1,4 @@
-export function generateComputerChoice(numberChoice) {
-    if (numberChoice === 0) {
-        return 'rock';
-    } if (numberChoice === 1) {
-        return 'paper';
-    } else {
-        return 'scissors';
-    }
-}
+
 
 export function doesUserWin(player, computer) {
     //wins
@@ -16,7 +8,7 @@ export function doesUserWin(player, computer) {
     if (player === 'rock' && computer === 'scissors') {
         return 'player wins';
     }
-    if (player === 'scissor' && computer === 'paper') {
+    if (player === 'scissors' && computer === 'paper') {
         return 'player wins';
     }
     //losses
