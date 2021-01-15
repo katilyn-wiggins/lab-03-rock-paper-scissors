@@ -69,17 +69,17 @@ function updateDisplays() {
 
 restartButton.addEventListener('click', () => {
     reset++;
-    winsDisplay.textContent = '';
-    lossesDisplay.textContent = '';
-    drawDisplay.textContent = '';
-    totalDisplay.textContent = '';
+    restartCounter.textContent = reset;
+    wins = 0;
+    losses = 0;
+    draws = 0;
+    total = 0;
+    
+    winsDisplay.textContent = wins;
+    lossesDisplay.textContent = losses;
+    drawDisplay.textContent = draws;
+    totalDisplay.textContent = total;
     messageDisplay.textContent = '';
     computerDisplay.textContent = '';
-
-    updateReset();
 });
-
-function updateReset() {
-    restartCounter.textContent = reset;
-}
 
