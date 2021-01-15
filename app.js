@@ -3,8 +3,8 @@ import { doesUserWin } from './utils.js';
 import { getRandomThrow } from './get-random-throw.js';
 
 const playButton = document.getElementById('play-button');
-const computerDisplay = document.getElementById('computer-result-message');
-const messageDisplay = document.getElementById('message');
+const computerDisplay = document.getElementById('computer-throw-message');
+const messageDisplay = document.getElementById('result-message');
 const winsDisplay = document.getElementById('wins');
 const lossesDisplay = document.getElementById('losses');
 const drawDisplay = document.getElementById('draws');
