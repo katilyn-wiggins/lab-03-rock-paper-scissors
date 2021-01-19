@@ -26,6 +26,7 @@
             <h4>Instructions: Make your selection of rock, paper, or scissors below and press submit. Mr. Krabs will
                 also pick
                 his! Your results will display at the bottom of the page</h3>
+                <div class="radio-buttons">
                 <label>
                     <input type="radio" name="rps" value="rock">
                     <img id="game" src="https://i.pinimg.com/originals/a6/18/a6/a618a613d702f8cf32f5caadd7310e33.jpg"
@@ -39,23 +40,22 @@
                 </label>
                 <label>
                     <input type="radio" name="rps" value="scissors">
-                    <img id="game" src="https://i.imgur.com/hZGUIuq.png" alt="pet rock spongebob">
+                    <img id="game" src="./assets/hZGUIuq.png" alt="Larry with Scissors">
                 </label>
-                <button id="play-button">Play!</button>
-                <div id="computer-result-message"></div>
-                <div id="message"></div>
+                </div>
+                <button id="play-button" class="big-button button">Play!</button>
+                <container class="main-section change-color">
+                    <div id="computer-throw-message"></div>
+                    <div id="result-message"></div>
+                </container>
                 <div>Wins: <span id="wins"></span></div>
                 <div>Losses: <span id="losses"></span></div>
                 <div>Draws: <span id="draws"></span></div>
                 <div>Total Games Played: <span id="total"></span></div>
-                <button id="restart">Reset</button>
+                <button id="restart" class="big-button button">Reset</button>
                 <div>Number of Resets: <span id="restart-counter"></span></div>
         </section>
     </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
-
     <script type="module" src="app.js"></script>
 </body>
 
